@@ -83,6 +83,22 @@
       margin-bottom: 20px;
     }
 
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 160px;
+      align-items: start;
+      gap: 28px;
+    }
+
+    .portrait {
+      width: 160px;
+      aspect-ratio: 1;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
     .links {
       display: flex;
       flex-wrap: wrap;
@@ -158,18 +174,31 @@
       .intro {
         font-size: 19px;
       }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait {
+        width: 132px;
+      }
     }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <h1>Hi, I'm Sriram Ananthakrishnan.</h1>
-      <p class="intro">I am building a small home for my machine learning notes, projects, and experiments with language models, systems, and applied AI.</p>
-      <ul class="links" aria-label="Profile links">
-        <li>Email: <a href="mailto:sriram.maven1193@gmail.com">sriram.maven1193@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/sriram-ananthakrishnan">Sriram Ananthakrishnan</a></li>
-      </ul>
+      <div class="hero">
+        <div>
+          <h1>Hi, I'm Sriram Ananthakrishnan.</h1>
+          <p class="intro">I am building a small home for my machine learning notes, projects, and experiments with language models, systems, and applied AI.</p>
+          <ul class="links" aria-label="Profile links">
+            <li>Email: <a href="mailto:sriram.maven1193@gmail.com">sriram.maven1193@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/sriram-ananthakrishnan">Sriram Ananthakrishnan</a></li>
+          </ul>
+        </div>
+        <img class="portrait" src="profile.jpg" alt="Portrait of Sriram Ananthakrishnan">
+      </div>
     </header>
 
     <section aria-labelledby="about">
